@@ -1,0 +1,14 @@
+.userCard {
+  border: 1px solid black;
+  border-radius: 20px;
+  text-align: center;
+}
+.userCard h3 {
+  margin-bottom: 5px;
+}
+.userCard input {
+  width: 50%;
+}
+.input-block {
+  margin-bottom: 10px;
+}
