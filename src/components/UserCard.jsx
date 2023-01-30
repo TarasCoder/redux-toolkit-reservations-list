@@ -10,20 +10,22 @@ function UserCard(props) {
   const dispatch = useDispatch();
 
   const handleAddFood = () => {
-    dispatch(addFood(currentFood));
+    dispatch(addFood({ id: id, value: currentFood }));
+    setcurrentFood("");
   };
 
   return (
     <div className="userCard">
       <h3>{name}</h3>
-      {food.map((item) => (
-        <p>{item}</p>
+      {food.map((item, id) => (
+        <p key={id}>{item}</p>
       ))}
       <div className="input-block">
         <input
           type="text"
+          value={currentFood}
           onChange={(ev) => {
-            setcurrentFood({ id: id, value: ev.target.value });
+            setcurrentFood(ev.target.value);
           }}
         />
         <button onClick={handleAddFood}>Add</button>

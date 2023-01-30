@@ -40,7 +40,7 @@ function App() {
         </div>
         <div className="usersBlock">
           <h3>Here are the reservations</h3>
-          {users.map((user)=><UserCard user={user} />)}
+          {users.map((user, id)=><UserCard key={id} user={user} />)}
         </div>
       </div>
     </div>
